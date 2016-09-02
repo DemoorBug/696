@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+a {
+  background: #FFF;
+  height: 200px;
+}
+body {
+  height: 1000px;
+}
+.header {
+  font-size: 80px;
+  height: 50px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "微软雅黑";
+  color: yellow;
+}
+.header:hover {
+  color: blue;
+}
+
+/*# sourceMappingURL=./map/main.css.map */
