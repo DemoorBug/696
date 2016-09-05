@@ -363,13 +363,20 @@ a.btn-link.text-muted {
 }
 
 
-
+body {
+    padding-right: 0!important;
+}
 
 a:focus {
     outline: none!important;
     color: #9d9d9d;
 }
-
+.modal {
+    position: absolute;
+}
+.modal-open {
+    overflow: visible;
+}
 @media (max-width: 767px) { /*手机端*/
 .navbar_collapse {
     position: absolute;
@@ -403,4 +410,5 @@ a:focus {
 .text .text_pa {
     height: auto;
 }
+
 }
