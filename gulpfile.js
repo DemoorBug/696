@@ -70,9 +70,9 @@ gulp.task('sprite', function() {
 gulp.task('default',function() {
     var jsFilter = filter('**/*.js', {restore: true});
     var cssFilter = filter('**/*.css', {restore: true});
-    var indexHtmlFilter = filter(['**/*','!**/index.html'], {restore: true});
+    var indexHtmlFilter = filter(['**/*','!**/*.html'], {restore: true});
 
-    return gulp.src('src/index.html')
+    return gulp.src('src/*.html')
         .pipe(useref())
         .pipe(jsFilter)
         .pipe(uglify())
