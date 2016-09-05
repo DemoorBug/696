@@ -410,5 +410,8 @@ a:focus {
 .text .text_pa {
     height: auto;
 }
-
+.modal-sm-user {
+    top: 30px;
+    margin: 0 0 0 -200px;
+}
 }
