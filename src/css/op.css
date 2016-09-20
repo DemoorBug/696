@@ -1,0 +1,23 @@
+.hero {
+    background-color: rgba(0, 0, 0, .5);
+    border: solid 1px rgba(100, 102, 103, .3);
+}
+
+.a, .b:not(.c), d {
+    color: red;
+}
+html {
+  font-size: 62.5%;
+  /*网页默认大小16px   10/16*100%  = 62.5%  也就是网页字体大小设置为10px */
+  color: #000;
+}
+.mos {
+    font-size: 1.2rem;
+}
+.figure {
+    opacity: .5;
+}
+.foo { flex: 1; }
+.bar { flex: 1 1; }
+.foz { flex: 1 1 0; }
+.baz { flex: 1 1 0px; }

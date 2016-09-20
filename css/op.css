@@ -1,0 +1,24 @@
+.hero {
+    background-color: #000000;
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80000000',endColorstr='#80000000');
+    border: solid 1px #646667;
+}
+
+.a, d {
+    color: red;
+}
+html {
+  font-size: 625%;
+  /*网页默认大小16px   10/16*100%  = 62.5%  也就是网页字体大小设置为10px */
+  color: #000;
+}
+.mos {
+    font-size: 12px;
+}
+.figure {
+    filter: alpha(opacity=50);
+}
+.foo { flex: 1 1 0%; }
+.bar { flex: 1 1 0%; }
+.foz { flex: 1 1 0%; }
+.baz { flex: 1 1 0%; }

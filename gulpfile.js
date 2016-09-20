@@ -46,7 +46,10 @@ gulp.task('less', function () {
     .pipe(less({
       // paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
-    .pipe(autoprefixer()) //- 添加兼容性前缀
+    .pipe(autoprefixer({
+        browsers: ['last 15 versions'],
+        cascade: false
+    })) //- 添加兼容性前缀
     .pipe(sourcemaps.write(path.relative(_cssDistDir, _cssMapsDir), {
       sourceMappingURL: function(file) {
         return './map/' + file.relative + '.map';
@@ -87,7 +90,30 @@ gulp.task('default',function() {
         .pipe(gulp.dest('dist'));
 })
 
+var postcss = require('gulp-postcss');
 
+gulp.task('css', function () {
+    return gulp.src('src/css/op.css').pipe(
+        postcss([
+            //tranforms CSS to be compatible with old Internet Explorer.
+            require('oldie')({
+                rgba: {
+                        filter: true
+                    },
+                    rem: {
+                        replace: true
+                    },
+                    unmq: {
+                        disable: true
+                    }
+             }),
+            require('postcss-flexbugs-fixes')()
+            //postcss插件这个项目试图解决所有的问题flexbug。
+        ])
+    ).pipe(
+        gulp.dest('./css')
+    );
+});
 
 // <!-- build:css css/combined.css -->
 // <!-- endbuild -->
